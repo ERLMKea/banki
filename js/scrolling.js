@@ -5,9 +5,28 @@ const inpScrolling = document.getElementById("inpScrolling")
 const section3 = document.querySelector("#section--3")
 
 function doScrolling(evt, scroll) {
-    const s3coords = section.getBoundingClientRect();
-    out(s3coords)
-    
+    const s3coords = section3.getBoundingClientRect();
+    //out(s3coords)
+    out(scroll)
+    const js1 = JSON.parse(scroll)
+    out(js1)
+    out(js1.left)
+    out(js1.top)
+
+    window.scrollTo({
+        left: js1.left,
+        top: js1.top,
+        behavior: 'smooth'
+    })
+
 }
 
-pbGetScrolling.addEventListener('click', btn => doScrolling(btn, inpScrolling.value))
+function showViewPort() {
+    out("Screen size also called viewport")
+    out(document.documentElement.clientHeight, document.documentElement.clientWidth)
+}
+
+
+
+//pbGetScrolling.addEventListener('click', btn => doScrolling(btn, inpScrolling.value))
+pbGetScrolling.addEventListener('click', showViewPort)
