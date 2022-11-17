@@ -11,3 +11,4 @@ for(const a of img.attributes) {
     out(a.name, a.value)
 }
 
+out(logo.dataset.versionNumber)
