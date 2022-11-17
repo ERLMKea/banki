@@ -6,7 +6,7 @@ const section3 = document.querySelector("#section--3")
 
 function doScrolling(evt, scroll) {
     const s3coords = section3.getBoundingClientRect();
-    //out(s3coords)
+    out(s3coords)
     out(scroll)
     const js1 = JSON.parse(scroll)
     out(js1)
@@ -26,7 +26,7 @@ function showViewPort() {
     out(document.documentElement.clientHeight, document.documentElement.clientWidth)
 }
 
-funtion sectionScroll(evt, section) {
+function sectionScroll(evt, section) {
     if (section == 1) {
         section1.scrollIntoView({behavior:'smooth'})
     }
