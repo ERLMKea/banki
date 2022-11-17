@@ -26,7 +26,13 @@ function showViewPort() {
     out(document.documentElement.clientHeight, document.documentElement.clientWidth)
 }
 
+funtion sectionScroll(evt, section) {
+    if (section == 1) {
+        section1.scrollIntoView({behavior:'smooth'})
+    }
+}
 
 
-//pbGetScrolling.addEventListener('click', btn => doScrolling(btn, inpScrolling.value))
-pbGetScrolling.addEventListener('click', showViewPort)
+
+pbGetScrolling.addEventListener('click', btn => doScrolling(btn, inpScrolling.value))
+//pbGetScrolling.addEventListener('click', showViewPort)
